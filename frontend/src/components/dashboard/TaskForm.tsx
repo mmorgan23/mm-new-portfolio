@@ -8,6 +8,7 @@ const EXAMPLES = [
   'Create a project plan for a website redesign',
   'Analyze a software architecture and provide recommendations',
   'Generate a technical specification for a feature',
+  'Create an onboarding guide for new team members',
 ]
 
 type TaskFormProps = {
