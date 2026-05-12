@@ -35,7 +35,7 @@ export function TaskForm({ onSubmit, disabled, initialValue = '' }: TaskFormProp
       />
       <div className="space-y-2">
         <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Examples</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
           {EXAMPLES.map((ex) => (
             <Button
               key={ex}
@@ -44,6 +44,7 @@ export function TaskForm({ onSubmit, disabled, initialValue = '' }: TaskFormProp
               size="xs"
               disabled={disabled}
               onClick={() => setText(ex)}
+              className="h-auto min-h-10 w-full touch-manipulation justify-start whitespace-normal py-2.5 text-left text-xs leading-snug sm:w-auto sm:min-h-8 sm:max-w-[20rem] sm:py-1.5"
             >
               {ex.length > 48 ? `${ex.slice(0, 45)}…` : ex}
             </Button>

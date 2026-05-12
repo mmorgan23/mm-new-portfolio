@@ -11,8 +11,10 @@ export default function BlogIndexPage({ posts }: Props) {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-semibold tracking-tight">Blog</h1>
-        <p className="mt-2 text-muted-foreground">Notes on agents, orchestration, and shipping reliable AI systems.</p>
+        <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">Blog</h1>
+        <p className="mt-2 text-pretty text-sm text-muted-foreground sm:text-base">
+          Notes on agents, orchestration, and shipping reliable AI systems.
+        </p>
       </div>
       <ul className="grid gap-4 sm:grid-cols-2">
         {posts.map((p) => (
@@ -29,12 +31,12 @@ export default function BlogIndexPage({ posts }: Props) {
                   />
                 ) : null}
                 <CardHeader>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs break-words text-muted-foreground">
                     {p.date}
                     {p.readingMinutes ? ` · ${p.readingMinutes} min read` : ''}
                     {p.category ? ` · ${p.category}` : ''}
                   </p>
-                  <CardTitle className="text-lg">{p.title}</CardTitle>
+                  <CardTitle className="text-base sm:text-lg">{p.title}</CardTitle>
                   {p.description ? <CardDescription>{p.description}</CardDescription> : null}
                 </CardHeader>
               </Card>

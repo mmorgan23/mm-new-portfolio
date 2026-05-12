@@ -28,27 +28,41 @@ const highlights = [
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl space-y-12">
-      <div className="space-y-4">
+    <div className="mx-auto min-w-0 max-w-3xl space-y-12">
+      <div className="min-w-0 space-y-4">
         <p className="text-sm font-medium uppercase tracking-widest text-primary">About Me</p>
-        <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">Melissa Morgan Whiz</h1>
-        <p>
-          I started my career in frontend and full-stack development, focused on building great user experiences. With 8+ years of hands-on development, I've evolved alongside the technology stack, learning what it takes to move from proof-of-concept to enterprise-grade reliability.
-        </p>
-        <p>
-          I led the design and deployment of a RAG-based platform that integrated OpenAI and Anthropic APIs into enterprise workflows. This wasn't just an experiment—we built it right from day one with evaluation frameworks, comprehensive monitoring, and governance embedded in the architecture.
-        </p>
-        <p>
-          That success led me to focus on what I find most compelling: architecting multi-agent workflows that meaningfully reduce manual operational effort. I led the end-to-end design and delivery of an AI-powered internal platform with multi-agent and multimodal LLM workflows deployed across the entire company. 
-        </p>
-        <p>
-          This work proved that when agents are designed thoughtfully—with clear communication patterns, well-defined responsibilities, and proper oversight—they can handle complex workflows that previously required significant human coordination.
-        </p>
-        <p>
-          Beyond the tech stack, what I care about is translating business problems into engineered AI solutions. I'm not interested in building for building's sake. For every system I architect, I ask: What problem does this actually solve? How do we know it's working? How do we ensure it stays reliable at scale?        
-        </p>
-        <p>
-          Interested in building intelligent systems together? I'd love to discuss opportunities where we can turn cutting-edge AI capabilities into solutions that matter.        </p>
+        <h1 className="text-balance text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl">Melissa Morgan Whiz</h1>
+        <div className="space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base [&_p]:break-words">
+          <p>
+            I started my career in frontend and full-stack development, focused on building great user experiences. With
+            8+ years of hands-on development, I've evolved alongside the technology stack, learning what it takes to move
+            from proof-of-concept to enterprise-grade reliability.
+          </p>
+          <p>
+            I led the design and deployment of a RAG-based platform that integrated OpenAI and Anthropic APIs into
+            enterprise workflows. This wasn't just an experiment—we built it right from day one with evaluation
+            frameworks, comprehensive monitoring, and governance embedded in the architecture.
+          </p>
+          <p>
+            That success led me to focus on what I find most compelling: architecting multi-agent workflows that
+            meaningfully reduce manual operational effort. I led the end-to-end design and delivery of an AI-powered
+            internal platform with multi-agent and multimodal LLM workflows deployed across the entire company.
+          </p>
+          <p>
+            This work proved that when agents are designed thoughtfully—with clear communication patterns, well-defined
+            responsibilities, and proper oversight—they can handle complex workflows that previously required significant
+            human coordination.
+          </p>
+          <p>
+            Beyond the tech stack, what I care about is translating business problems into engineered AI solutions. I'm
+            not interested in building for building's sake. For every system I architect, I ask: What problem does this
+            actually solve? How do we know it's working? How do we ensure it stays reliable at scale?
+          </p>
+          <p>
+            Interested in building intelligent systems together? I'd love to discuss opportunities where we can turn
+            cutting-edge AI capabilities into solutions that matter.
+          </p>
+        </div>
       </div>
 
       <Separator />
@@ -89,11 +103,11 @@ export default function AboutPage() {
         </CardHeader>
       </Card>
 
-      <div className="flex flex-wrap gap-3">
-        <Link to="/dashboard" className={buttonVariants({ size: 'lg' })}>
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <Link to="/dashboard" className={buttonVariants({ size: 'lg', className: 'min-h-12 w-full touch-manipulation sm:w-auto' })}>
           Try the agent dashboard
         </Link>
-        <Link to="/blog" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
+        <Link to="/blog" className={buttonVariants({ variant: 'outline', size: 'lg', className: 'min-h-12 w-full touch-manipulation sm:w-auto' })}>
           Read the blog
         </Link>
       </div>

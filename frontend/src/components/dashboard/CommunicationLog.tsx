@@ -39,7 +39,7 @@ export function CommunicationLog({ messages }: CommunicationLogProps) {
       <CardContent className="min-h-0">
         <div
           ref={viewportRef}
-          className="h-[min(40vh,320px)] overflow-y-auto overflow-x-hidden overscroll-y-contain pr-1 [scrollbar-gutter:stable]"
+          className="h-[min(32dvh,220px)] min-h-[160px] touch-pan-y overflow-y-auto overflow-x-hidden overscroll-y-contain pr-1 [scrollbar-gutter:stable] sm:h-[min(36dvh,280px)] md:h-[min(40vh,320px)]"
         >
           <ul className="space-y-3 text-sm">
             {messages.length === 0 ? (

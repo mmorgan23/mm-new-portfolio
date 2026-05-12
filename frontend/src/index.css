@@ -37,16 +37,16 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
     margin: 0;
     min-height: 100svh;
   }
 
   #root {
-    @apply min-h-svh flex flex-col;
+    @apply min-h-svh flex min-w-0 flex-col;
   }
   html {
-    @apply font-sans;
+    @apply font-sans overflow-x-hidden;
   }
 }
 

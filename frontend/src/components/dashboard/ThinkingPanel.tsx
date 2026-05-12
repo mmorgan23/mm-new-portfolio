@@ -29,7 +29,7 @@ export function ThinkingPanel({ lines }: ThinkingPanelProps) {
       <CardContent className="min-h-0">
         <div
           ref={viewportRef}
-          className="h-[min(28vh,240px)] overflow-y-auto overflow-x-hidden overscroll-y-contain pr-1 [scrollbar-gutter:stable]"
+          className="h-[min(28dvh,200px)] min-h-[140px] touch-pan-y overflow-y-auto overflow-x-hidden overscroll-y-contain pr-1 [scrollbar-gutter:stable] sm:h-[min(26vh,220px)] md:h-[min(28vh,240px)]"
         >
           <ul className="space-y-2 text-sm">
             {lines.length === 0 ? (

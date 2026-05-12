@@ -36,16 +36,16 @@ export function HomePage() {
     <div className="space-y-16">
       <section className="space-y-6 text-center sm:text-left">
         <p className="text-sm font-medium uppercase tracking-widest text-primary">Live portfolio</p>
-        <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+        <h1 className="text-balance text-2xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
           Meet the COO Agent Team
         </h1>
-        <p className="mx-auto max-w-2xl text-pretty text-muted-foreground sm:mx-0 md:text-lg">
+        <p className="mx-auto max-w-2xl text-pretty text-sm text-muted-foreground sm:mx-0 sm:text-base md:text-lg">
           I am <strong className="text-foreground">Mel</strong>, your AI Chief Operations Officer for this demo—analytical,
           polite, collaborative, detail-oriented, and a little obsessed with crisp handoffs. Submit a task and watch
           specialized agents plan, research, draft, and review in real time.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-start">
-          <Link to="/dashboard" className={buttonVariants({ size: 'lg' })}>
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-3 md:justify-start">
+          <Link to="/dashboard" className={buttonVariants({ size: 'lg', className: 'min-h-12 w-full touch-manipulation sm:w-auto' })}>
             Try the agent dashboard
           </Link>
           {/* <Link to="/projects" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
