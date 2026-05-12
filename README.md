@@ -55,6 +55,25 @@ pytest tests/
 2. Build command: `npm run build`, output: `dist`.
 3. Environment variable: `VITE_API_URL` = your public backend URL (e.g. `https://api.example.com`, no trailing slash).
 
+### Production checklist (live site “chatbot” / dashboard)
+
+The agent UI talks to **FastAPI on Railway/Render**, not to Anthropic from the browser. `CLAUDE_API_KEY` belongs on the **backend** host only.
+
+1. **Vercel (frontend)**  
+   - Set **`VITE_API_URL`** to your API’s **HTTPS** origin (no trailing slash).  
+   - Redeploy after any change (Vite bakes this in at build time).  
+   - If this is missing, the production build still defaults to `http://127.0.0.1:8000` and the live site cannot work. The app shows an **amber banner** when it detects that misconfiguration.
+
+2. **Railway / Render (backend)**  
+   - Set **`CLAUDE_API_KEY`**.  
+   - Set **`FRONTEND_URL`** to the **exact** browser origin of your Vercel app (e.g. `https://your-app.vercel.app`). Mismatch causes **CORS** errors in DevTools.  
+   - Open **`GET https://your-api/health`** — expect `{"ok":true}`.  
+   - On deploy, check logs: the API logs **CORS allow_origins** and whether **`CLAUDE_API_KEY`** is set (not the secret value).
+
+3. **Browser checks**  
+   - On the live site: DevTools → Network → submit a task → confirm **`POST /api/tasks`** goes to your real API host, not `127.0.0.1`.  
+   - Page is **HTTPS** → WebSocket must be **`wss://`** (handled automatically when `VITE_API_URL` is `https`).
+
 ### Backend (Railway or Render)
 
 1. Create a service from this repo with **root directory** `backend`.
