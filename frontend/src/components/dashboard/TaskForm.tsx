@@ -45,9 +45,9 @@ export function TaskForm({ onSubmit, disabled, initialValue = '' }: TaskFormProp
               size="xs"
               disabled={disabled}
               onClick={() => setText(ex)}
-              className="h-auto min-h-10 w-full touch-manipulation justify-start whitespace-normal py-2.5 text-left text-xs leading-snug sm:w-auto sm:min-h-8 sm:max-w-[20rem] sm:py-1.5"
+              className="h-auto min-h-10 w-full touch-manipulation justify-start whitespace-normal py-2.5 text-left text-xs leading-snug sm:w-auto sm:min-h-8 sm:max-w-[32rem] sm:py-1.5"
             >
-              {ex.length > 48 ? `${ex.slice(0, 45)}…` : ex}
+              {ex.length > 80 ? `${ex.slice(0, 80)}…` : ex}
             </Button>
           ))}
         </div>
