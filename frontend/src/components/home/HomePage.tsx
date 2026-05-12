@@ -48,9 +48,9 @@ export function HomePage() {
           <Link to="/dashboard" className={buttonVariants({ size: 'lg' })}>
             Try the agent dashboard
           </Link>
-          <Link to="/projects" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
+          {/* <Link to="/projects" className={buttonVariants({ variant: 'outline', size: 'lg' })}>
             View projects
-          </Link>
+          </Link> */}
         </div>
       </section>
 
