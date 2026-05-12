@@ -1,0 +1,5 @@
+import { HomePage as Home } from '@/components/home/HomePage'
+
+export default function HomePage() {
+  return <Home />
+}

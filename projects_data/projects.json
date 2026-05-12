@@ -1,0 +1,29 @@
+{
+  "projects": [
+    {
+      "id": "agent-portfolio",
+      "title": "AI Agent Portfolio (this site)",
+      "description": "Multi-agent orchestration demo with FastAPI, WebSockets, and Claude—COO, Research, Content, and QA collaborating in real time.",
+      "tech": ["React", "TypeScript", "Tailwind", "FastAPI", "Anthropic", "WebSockets"],
+      "demoUrl": "https://example.com",
+      "repoUrl": "https://github.com",
+      "image": "https://picsum.photos/seed/agents/800/450"
+    },
+    {
+      "id": "workflow-automation",
+      "title": "Workflow automation platform",
+      "description": "Event-driven pipelines with human-in-the-loop approvals, observability, and safe rollouts for operations teams.",
+      "tech": ["Python", "PostgreSQL", "Redis", "Temporal", "OpenTelemetry"],
+      "demoUrl": "https://example.com",
+      "image": "https://picsum.photos/seed/workflows/800/450"
+    },
+    {
+      "id": "llm-eval-harness",
+      "title": "LLM evaluation harness",
+      "description": "Regression suites for prompts and tools: golden tasks, scoring rubrics, and CI gates before model or prompt changes ship.",
+      "tech": ["TypeScript", "Pytest", "Claude API", "GitHub Actions"],
+      "repoUrl": "https://github.com",
+      "image": "https://picsum.photos/seed/eval/800/450"
+    }
+  ]
+}
