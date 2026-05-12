@@ -22,7 +22,7 @@ export function TaskForm({ onSubmit, disabled, initialValue = '' }: TaskFormProp
 
   return (
     <div className="space-y-4">
-      <label htmlFor="task-input" className="text-sm font-medium text-foreground">
+      <label htmlFor="task-input" className="text-sm font-medium text-foreground pb-2 block">
         What would you like the agents to do?
       </label>
       <Textarea
