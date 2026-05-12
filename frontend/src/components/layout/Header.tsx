@@ -89,12 +89,13 @@ export function Header() {
           />
           <div
             id="mobile-nav"
-            className="fixed inset-y-0 right-0 z-[70] flex w-[min(100vw-2rem,20rem)] max-w-[calc(100vw-1rem)] flex-col border-l border-border bg-card p-4 shadow-2xl md:hidden"
+            className="fixed inset-y-0 right-0 z-[70] flex h-[100dvh] max-h-[100dvh] w-[min(100vw-2rem,20rem)] max-w-[calc(100vw-1rem)] flex-col overflow-hidden border-l border-border bg-card shadow-2xl md:hidden"
+            style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
             role="dialog"
             aria-modal="true"
             aria-label="Site navigation"
           >
-            <div className="flex items-center justify-between border-b border-border pb-3">
+            <div className="flex shrink-0 items-center justify-between border-b border-border px-4 pb-3 pt-1">
               <span className="text-sm font-semibold text-foreground">Menu</span>
               <button
                 type="button"
@@ -105,21 +106,29 @@ export function Header() {
                 <X className="size-5" />
               </button>
             </div>
-            <nav className="mt-4 flex flex-1 flex-col gap-1 overflow-y-auto" aria-label="Main">
-              <NavLink to="/" end className={mobileNavClass} onClick={closeMobile}>
-                Home
-              </NavLink>
-              <NavLink to="/dashboard" className={mobileNavClass} onClick={closeMobile}>
-                Agent Dashboard
-              </NavLink>
-              <NavLink to="/blog" className={mobileNavClass} onClick={closeMobile}>
-                Blog
-              </NavLink>
-              <NavLink to="/about" className={mobileNavClass} onClick={closeMobile}>
-                About Me
-              </NavLink>
+            <nav
+              className="min-h-0 flex-1 overflow-y-auto overscroll-y-contain px-4 py-2"
+              aria-label="Main"
+            >
+              <div className="flex flex-col gap-1">
+                <NavLink to="/" end className={mobileNavClass} onClick={closeMobile}>
+                  Home
+                </NavLink>
+                <NavLink to="/dashboard" className={mobileNavClass} onClick={closeMobile}>
+                  Agent Dashboard
+                </NavLink>
+                <NavLink to="/blog" className={mobileNavClass} onClick={closeMobile}>
+                  Blog
+                </NavLink>
+                <NavLink to="/about" className={mobileNavClass} onClick={closeMobile}>
+                  About Me
+                </NavLink>
+              </div>
             </nav>
-            <div className="border-t border-border pt-4 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+            <div
+              className="shrink-0 border-t border-border bg-card px-4 pt-3"
+              style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom, 0px))' }}
+            >
               <Link
                 to="/dashboard"
                 className={buttonVariants({ size: 'default', className: 'w-full touch-manipulation' })}
