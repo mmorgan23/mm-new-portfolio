@@ -38,7 +38,7 @@ class ClaudeService:
                     return
                 except APIStatusError as exc:
                     status = getattr(exc, "status_code", None)
-                    if status not in (429, 500, 502, 503, 504) or attempt >= 4:
+                    if status not in (429, 500, 502, 503, 504, 529) or attempt >= 4:
                         raise
                     delay = 0.6 * (2 ** (attempt - 1))
                     LOG.warning("claude retry attempt=%s delay=%ss err=%s", attempt, delay, exc)
