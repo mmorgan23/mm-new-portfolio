@@ -45,4 +45,4 @@ class ClaudeService:
                     await asyncio.sleep(delay)
 
 
-claude_service = ClaudeService()
+claude_service = ClaudeService()  # singleton
